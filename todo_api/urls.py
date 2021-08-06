@@ -16,8 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
+from rest_framework_swagger.views import get_swagger_view
+
+schecma_view = get_swagger_view(title="Todo API")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include('apis.urls')),
+    path('', schecma_view)
 ]

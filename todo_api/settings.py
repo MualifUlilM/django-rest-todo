@@ -41,13 +41,15 @@ INSTALLED_APPS = [
     'todos',
     'apis',
     'rest_framework',
-    'knox'
+    'knox',
+    'rest_framework_swagger'
 ]
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'knox.auth.TokenAuthentication',
     ),
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
     
 }
 
