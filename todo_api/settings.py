@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'apis',
     'rest_framework',
     'knox',
-    'rest_framework_swagger'
+    'drf_yasg'
 ]
 
 REST_FRAMEWORK = {
